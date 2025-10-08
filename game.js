@@ -20,7 +20,7 @@ let questions = [
     answer: 4,
   },
   {
-    question: 'Which pandemic is now affecting the whole World?',
+    question: 'Which pandemic was affecting the whole World ( 2020 - 2022 )?',
     choice1: 'Spanish Flu',
     choice2: 'Italian Plague',
     choice3: 'Covid-19',
@@ -44,7 +44,7 @@ let questions = [
     answer: 3,
   },
   {
-    question: 'Which famous singer died recently ?',
+    question: 'Which famous singer died a few years back ?',
     choice1: 'Alka Yagnik',
     choice2: 'Asha Bhonsle',
     choice3: 'Kishore Kumar',
@@ -83,7 +83,7 @@ getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
     localStorage.setItem('mostRecentScore', score);
 
-    return window.location.assign('/end.html');
+    return window.location.assign('./end.html');
   }
 
   questionCounter++;
@@ -141,3 +141,4 @@ decrementScore = (num) => {
 };
 
 startGame();
+
